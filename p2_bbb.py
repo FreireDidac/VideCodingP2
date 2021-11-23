@@ -28,17 +28,17 @@ def resize_video():
 		else:
 			input("please choose a valid option:\n 1- 720p\n2- 480p\n3- 360x240p\n4- 160x120p\n")
 def reEncode_audio():
-	option = input("do you want to change the audio to mp2 or turn it into mono? (mono/mp2)\n")
+	option = input("do you want to change the audio to mp3 or turn it into mono? (mono/mp2)\n")
 	loop = True
 	while loop:
 		if option == "mono":
 			os.system("ffmpeg -i " + video + " -c:v copy -ac 1 mono_bbb.mp4")
 			loop = False
 		elif option == "mp2":
-			os.system("ffmpeg -i " + video + " -acodec mp2 -vcodec copy mp2_bbb.mp4")
+			os.system("ffmpeg -i " + video + " -acodec mp3 -vcodec copy mp2_bbb.mp4")
 			loop = False
 		else:
-			input("please select a valid option (mono/mp2)\n")
+			input("please select a valid option (mono/mp3)\n")
 
 
 def main():

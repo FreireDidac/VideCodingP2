@@ -35,7 +35,7 @@ def reEncode_audio():
 			os.system("ffmpeg -i " + video + " -c:v copy -ac 1 mono_bbb.mp4")
 			loop = False
 		elif option == "mp2":
-			os.system("ffmpeg -i " + video + " -acodec mp3 -vcodec copy mp2_bbb.mp4")
+			os.system("ffmpeg -i " + video + " -acodec mp3 -vcodec copy mp3_bbb.mp4")
 			loop = False
 		else:
 			input("please select a valid option (mono/mp3)\n")
